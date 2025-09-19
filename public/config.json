@@ -2,7 +2,7 @@
   "theme": {
     "tagline": "Welcome to our amazing platform",
     "accentColor": "#007bff",
-    "logo": "/logo.png"
+    "logo": "./logo.png"
   },
   "countries": {
     "default": "US",

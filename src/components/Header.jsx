@@ -3,8 +3,8 @@ import { withLDConsumer } from 'launchdarkly-react-client-sdk';
 
 // Logo mapping for LaunchDarkly flag values
 const logoMap = {
-  'anthropic_1': '/logos/anthropic_1.png',
-  'anthropic_2': '/logos/anthropic_2.png'
+  'anthropic_1': `${import.meta.env.BASE_URL}logos/anthropic_1.png`,
+  'anthropic_2': `${import.meta.env.BASE_URL}logos/anthropic_2.png`
 };
 
 const Header = ({ theme, flags }) => {

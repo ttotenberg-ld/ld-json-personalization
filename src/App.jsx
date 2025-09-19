@@ -11,7 +11,7 @@ function App({ flags, ldClient }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('/config.json')
+    fetch(`${import.meta.env.BASE_URL}config.json`)
       .then(response => response.json())
       .then(data => {
         setConfig(data)
@@ -34,8 +34,8 @@ function App({ flags, ldClient }) {
 
   // Logo mapping for LaunchDarkly flag values
   const logoMap = {
-    'anthropic_1': '/logos/anthropic_1.png',
-    'anthropic_2': '/logos/anthropic_2.png'
+    'anthropic_1': `${import.meta.env.BASE_URL}logos/anthropic_1.png`,
+    'anthropic_2': `${import.meta.env.BASE_URL}logos/anthropic_2.png`
   };
 
   // Derive theme from LaunchDarkly configTheme flag and config fallback

@@ -1,0 +1,143 @@
+.country-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.selector-label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.dropdown {
+  position: relative;
+  min-width: 200px;
+}
+
+.dropdown-toggle {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: white;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dropdown-toggle:hover {
+  border-color: var(--accent-color, #007bff);
+}
+
+.dropdown-toggle:focus {
+  outline: none;
+  border-color: var(--accent-color, #007bff);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.flag {
+  font-size: 1.2rem;
+}
+
+.country-name {
+  flex: 1;
+  text-align: left;
+  font-weight: 500;
+}
+
+.arrow {
+  font-size: 0.8rem;
+  color: #666;
+  transition: transform 0.2s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  margin-top: 0.25rem;
+  overflow: hidden;
+}
+
+.search-container {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e1e5e9;
+  background: #f8f9fa;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e1e5e9;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: var(--accent-color, #007bff);
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+.dropdown-items {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.no-results {
+  padding: 1rem;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+.dropdown-item.active {
+  background-color: var(--accent-color, #007bff);
+  color: white;
+}
+
+.dropdown-items .dropdown-item:first-child {
+  border-radius: 0;
+}
+
+.dropdown-items .dropdown-item:last-child {
+  border-radius: 0;
+}
+
+@media (max-width: 768px) {
+  .dropdown {
+    min-width: 100%;
+  }
+}
+
+
